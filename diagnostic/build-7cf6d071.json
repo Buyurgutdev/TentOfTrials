@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-19T15:13:15.891573+00:00",
-  "commit": "00000000",
+  "generated_at": "2026-06-19T15:32:41.920612+00:00",
+  "commit": "7cf6d071",
   "diagnostic_logd": null,
   "diagnostic_logd_error": null,
   "message_blocker": null,
@@ -15,7 +15,7 @@
     {
       "name": "encryptly-preflight",
       "status": "FAIL",
-      "elapsed_seconds": 60.208,
+      "elapsed_seconds": 60.097,
       "artifact": null,
       "output": "You need to fix your environment so encryptly runs before building. encryptly preflight TIMEOUT (60s)"
     }
