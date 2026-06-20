@@ -755,7 +755,7 @@ def generate_logd(
         safe_dir.mkdir(parents=True, exist_ok=True)
 
         (safe_dir / "system-info.txt").write_text(
-            collect_system_info(), encoding="utf-8"
+            redact_diagnostic_text(collect_system_info()), encoding="utf-8"
         )
 
         summary_lines = [
@@ -786,7 +786,7 @@ def generate_logd(
             if binary:
                 log_lines.append(f"artifact: {binary}")
             if output:
-                log_lines.append(output)
+                log_lines.append(redact_diagnostic_text(output))
         (safe_dir / "build.log").write_text("\n".join(log_lines), encoding="utf-8")
 
         sr = subprocess.run(
